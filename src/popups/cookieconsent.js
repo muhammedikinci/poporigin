@@ -9,7 +9,7 @@ window.pupdata = {
   },
   okButton: {
     borderRadius: '5px',
-    padding: '15px',
+    padding: '10px',
     text: 'Kabul Ediyorum',
     url: 'function'
   },
@@ -21,7 +21,7 @@ window.pupdata = {
     color3: '#3f3f44',
   },
   borderRadius : '5px',
-  padding: '10px',
+  padding: '15px',
   positioning: 'BOTTOM_RIGHT', // Valid values ['CENTER','BOTTOM_LEFT','BOTTOM_RIGHT']
 };
 
@@ -66,7 +66,7 @@ export const popup = `
 
         .pupdata-wrapper {
             position: relative;
-            padding: 45px;
+            padding: 30px;
             font-family: 'Roboto', sans-serif;
             width: 525px;
             height: auto;
@@ -78,11 +78,11 @@ export const popup = `
             -moz-box-shadow: 0px 2px 6px 0px rgb(194, 194, 194);
             box-shadow: 0px 2px 6px 0px rgb(194, 194, 194);
             color: ${window.pupdata.colors.color3};
-            animation: fadeIn ease 3s;
-            -webkit-animation: fadeIn 0.5s;
-            -moz-animation: fadeIn 0.5s;
-            -o-animation: fadeIn 0.5s;
-            -ms-animation: fadeIn 0.5s;
+            animation: fadeIn ease 300ms;
+            -webkit-animation: fadeIn 300ms;
+            -moz-animation: fadeIn 300ms;
+            -o-animation: fadeIn 300ms;
+            -ms-animation: fadeIn 300ms;
             z-index: 3;
             background-color: ${window.pupdata.colors.color1};
         }
@@ -193,8 +193,8 @@ export const popup = `
         }
 
         .closeButton {
-            width: 40px;
-            height: 40px;
+            width: 25px;
+            height: 25px;
             background-color: ${window.pupdata.colors.color2};
             border-radius: 50px;
             position: absolute;
@@ -217,7 +217,7 @@ export const popup = `
     
     <div class="pupdata-wrapper" >
         <div class="closeButton" id="closeButton">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 72.125 72.125">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 72.125 72.125">
                 <g id="Group_1" data-name="Group 1" transform="translate(-281.438 117.562)">
                     <line id="Line_1" data-name="Line 1" y2="100" transform="translate(282.145 -116.855) rotate(-45)" fill="none" stroke="#fff" stroke-width="6"/>
                     <line id="Line_2" data-name="Line 2" x2="100" transform="translate(282.145 -46.145) rotate(-45)" fill="none" stroke="#fff" stroke-width="6"/>

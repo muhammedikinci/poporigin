@@ -52,7 +52,7 @@ function RemoverEvent(selector) {
     .addEventListener('click', function (e) {
       e.preventDefault();
       SetCookie();
-      if (this.getAttribute('href') !== 'function') {
+      if (this.getAttribute('href') === 'function') {
         document.querySelector('#pupdata-popup').remove();
       }
       else if (this.getAttribute('id') !== 'closeButton') {

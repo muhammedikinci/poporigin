@@ -1,29 +1,29 @@
-window.pupdata = {
-  headline: {
-      text: 'Çerez Politikamız',
-      fontSize: '28px'
-  },
-  description: {
-      text: 'İnternet sitemizde çerez kullanılmaktadır. Çerezler hakkında detaylı bilgi için <a href="https://ozkayatipmerkezi.com/cerez-ve-gizlilik-politikasi/">Gizlilik ve Çerez Politikası\'nı</a> inceleyiniz. Devam etmeniz halinde çerez kullanımına izin verdiğinizi kabul edeceğiz. ',
-      fontSize: '13px'
-  },
-  okButton: {
-    borderRadius: '5px',
-    padding: '10px',
-    text: 'Kabul Ediyorum',
-    url: 'function'
-  },
-  exitIntend: false,
-  afterSeconds: 0,
-  colors: {
-    color1: '#f7f7f7',
-    color2: '#3f3f44',
-    color3: '#3f3f44',
-  },
-  borderRadius : '5px',
-  padding: '15px',
-  positioning: 'BOTTOM_RIGHT', // Valid values ['CENTER','BOTTOM_LEFT','BOTTOM_RIGHT']
-};
+// window.pupdata = {
+//   headline: {
+//       text: 'Çerez Politikamız',
+//       fontSize: '28px'
+//   },
+//   description: {
+//       text: 'İnternet sitemizde çerez kullanılmaktadır. Çerezler hakkında detaylı bilgi için <a href="https://ozkayatipmerkezi.com/cerez-ve-gizlilik-politikasi/">Gizlilik ve Çerez Politikası\'nı</a> inceleyiniz. Devam etmeniz halinde çerez kullanımına izin verdiğinizi kabul edeceğiz. ',
+//       fontSize: '13px'
+//   },
+//   okButton: {
+//     borderRadius: '5px',
+//     padding: '10px',
+//     text: 'Kabul Ediyorum',
+//     url: 'function'
+//   },
+//   exitIntend: false,
+//   afterSeconds: 0,
+//   colors: {
+//     color1: '#f7f7f7',
+//     color2: '#3f3f44',
+//     color3: '#3f3f44',
+//   },
+//   borderRadius : '5px',
+//   padding: '15px',
+//   positioning: 'BOTTOM_RIGHT', // Valid values ['CENTER','BOTTOM_LEFT','BOTTOM_RIGHT']
+// };
 
 export const popup = `
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">

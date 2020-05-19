@@ -52,7 +52,7 @@ function RemoverEvent(selector) {
     .addEventListener('click', function (e) {
       e.preventDefault();
       SetCookie();
-      if (this.getAttribute('id') !== 'closeButton') {
+      if (this.getAttribute('id') !== 'closeButton' && this.getAttribute('href') !== 'function') {
         window.location.href = this.getAttribute('href');
       }
       else {

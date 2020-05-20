@@ -36,13 +36,13 @@ export function renderPopup(data) {
     document.body.appendChild(wrapper);
   }
 
-  RemoverEvent('#secondaryButton');
-  RemoverEvent('#overlay');
-  RemoverEvent('#closeButton');
-  RemoverEvent('#firstButton');
+  EventHandler('#secondaryButton');
+  EventHandler('#overlay');
+  EventHandler('#closeButton');
+  EventHandler('#firstButton');
 }
 
-function RemoverEvent(selector) {
+function EventHandler(selector) {
   if (document.querySelector('#pupdata-popup') === null) return;
   if (
     document

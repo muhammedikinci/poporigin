@@ -4,7 +4,7 @@ Cookie Consent Popup
 // **** Override Window Object From Main.js ****
 // **** Delete this fields at publish time  ****
 // window.pupdata = {
-//     appendTargetSelector: 'h1',
+//     appendTargetSelector: 'body',
 //     closeEventOverride: function (selector) {
 //         console.log(selector);
 //     },
@@ -30,8 +30,8 @@ Cookie Consent Popup
 //         color3: '#3f3f44',
 //     },
 //     borderRadius : '5px',
-//     padding: '15px',
-//     positioning: 'BOTTOM_RIGHT', // Valid values ['CENTER','BOTTOM_LEFT','BOTTOM_RIGHT']
+//     padding: '25px',
+//     position: 'TOP_LEFT', // Valid values ['CENTER', 'BOTTOM_LEFT', 'BOTTOM_RIGHT', 'TOP_LEFT', 'TOP_RIGHT']
 // };
 
 export const popup = `
@@ -39,22 +39,32 @@ export const popup = `
     <style>
         :host {
             ${
-              window.pupdata.positioning === 'BOTTOM_LEFT'
+              window.pupdata.position === 'BOTTOM_LEFT'
                 ? `left: ${window.pupdata.padding}; bottom: ${window.pupdata.padding};`
                 : ''
             }
             ${
-              window.pupdata.positioning === 'BOTTOM_RIGHT'
+              window.pupdata.position === 'BOTTOM_RIGHT'
                 ? `right: ${window.pupdata.padding}; bottom: ${window.pupdata.padding};`
                 : ''
             }
             ${
-              window.pupdata.positioning === 'CENTER'
+                window.pupdata.position === 'TOP_LEFT'
+                    ? `left: ${window.pupdata.padding}; top: ${window.pupdata.padding};`
+                    : ''
+            }
+                        ${
+                window.pupdata.position === 'TOP_RIGHT'
+                    ? `right: ${window.pupdata.padding}; top: ${window.pupdata.padding};`
+                    : ''
+            }
+            ${
+              window.pupdata.position === 'CENTER'
                 ? 'left: 0; top: 0;'
                 : ''
             }
             ${
-              window.pupdata.positioning === 'CENTER'
+              window.pupdata.position === 'CENTER'
                 ? 'width: 100%; height: 100vh;'
                 : 'width: 500px; height: auto;'
             }
@@ -66,8 +76,10 @@ export const popup = `
 
         @media (max-width: 578px) {
             :host {
+                ${
+                    window.pupdata.position.indexOf('BOTTOM') !== -1 ? 'bottom: 0;' : 'top: 0;'
+                }
                 left: 0;
-                bottom: 0;
                 right: 0;
                 width: 100%;
             }
@@ -242,7 +254,7 @@ export const popup = `
         </div>
     </div>
     ${
-      window.pupdata.positioning === 'CENTER'
+      window.pupdata.position === 'CENTER'
         ? '<div class="overlay" id="overlay"></div>'
         : ''
     }

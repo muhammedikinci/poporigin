@@ -1,28 +1,37 @@
+/*
+Cookie Consent Popup
+ */
+// **** Override Window Object From Main.js ****
+// **** Delete this fields at publish time  ****
 // window.pupdata = {
-//   headline: {
-//       text: 'Çerez Politikamız',
-//       fontSize: '28px'
-//   },
-//   description: {
-//       text: 'İnternet sitemizde çerez kullanılmaktadır. Çerezler hakkında detaylı bilgi için <a href="https://ozkayatipmerkezi.com/cerez-ve-gizlilik-politikasi/">Gizlilik ve Çerez Politikası\'nı</a> inceleyiniz. Devam etmeniz halinde çerez kullanımına izin verdiğinizi kabul edeceğiz. ',
-//       fontSize: '13px'
-//   },
-//   okButton: {
-//     borderRadius: '5px',
-//     padding: '10px',
-//     text: 'Kabul Ediyorum',
-//     url: 'function'
-//   },
-//   exitIntend: false,
-//   afterSeconds: 0,
-//   colors: {
-//     color1: '#f7f7f7',
-//     color2: '#3f3f44',
-//     color3: '#3f3f44',
-//   },
-//   borderRadius : '5px',
-//   padding: '15px',
-//   positioning: 'BOTTOM_RIGHT', // Valid values ['CENTER','BOTTOM_LEFT','BOTTOM_RIGHT']
+//     appendTargetSelector: 'h1',
+//     closeEventOverride: function (selector) {
+//         console.log(selector);
+//     },
+//     headline: {
+//         text: 'Çerez Politikamız',
+//         fontSize: '28px'
+//     },
+//     description: {
+//         text: 'İnternet sitemizde çerez kullanılmaktadır. Çerezler hakkında detaylı bilgi için <a href="https://google.com">Gizlilik ve Çerez Politikası\'nı</a> inceleyiniz. Devam etmeniz halinde çerez kullanımına izin verdiğinizi kabul edeceğiz. ',
+//         fontSize: '13px'
+//     },
+//     okButton: {
+//         borderRadius: '5px',
+//         padding: '10px',
+//         text: 'Kabul Ediyorum',
+//         url: 'function'
+//     },
+//     exitIntend: false,
+//     afterSeconds: 0,
+//     colors: {
+//         color1: '#f7f7f7',
+//         color2: '#3f3f44',
+//         color3: '#3f3f44',
+//     },
+//     borderRadius : '5px',
+//     padding: '15px',
+//     positioning: 'BOTTOM_RIGHT', // Valid values ['CENTER','BOTTOM_LEFT','BOTTOM_RIGHT']
 // };
 
 export const popup = `

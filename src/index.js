@@ -5,7 +5,7 @@ import {
   showPopup,
   afterSecond,
 } from './mode';
-import { popup } from './popups/cookieconsent';
+import { popup } from './popups/popup1';
 
 (() => {
   if (typeof window.pupdata === 'undefined')

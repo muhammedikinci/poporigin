@@ -23,13 +23,18 @@ export function showPopup() {
 }
 
 export function renderPopup(data) {
-  var wrapper = document.createElement('div');
+  let wrapper = document.createElement('div');
   wrapper.setAttribute('id', 'pupdata-popup');
   wrapper.setAttribute('style', 'display: none;');
 
-  var wrapperShadow = wrapper.attachShadow({ mode: 'open' });
+  let wrapperShadow = wrapper.attachShadow({ mode: 'open' });
   wrapperShadow.innerHTML = data;
-  document.body.appendChild(wrapper);
+
+  if (typeof (window.pupdata || {}).appendTargetSelector !== 'undefined') {
+    document.querySelector(window.pupdata.appendTargetSelector).appendChild(wrapper);
+  } else {
+    document.body.appendChild(wrapper);
+  }
 
   RemoverEvent('#secondaryButton');
   RemoverEvent('#overlay');
@@ -64,25 +69,9 @@ function RemoverEvent(selector) {
     });
 }
 
-function CookieEvent(selector) {
-  if (document.querySelector('#pupdata-popup') === null) return;
-  if (
-    document
-      .querySelector('#pupdata-popup')
-      .shadowRoot.querySelector(selector) === null
-  )
-    return;
-
-  document
-    .querySelector('#pupdata-popup')
-    .shadowRoot.querySelector(selector)
-    .addEventListener('click', function (e) {
-      SetCookie();
-    });
-}
-
 function SetCookie() {
-  var date = new Date();
+  let date = new Date();
+
   date.setDate(new Date().getDate() + 1);
   document.cookie =
     'pupdata-popup=1; expires=' + date.toGMTString() + '; path=/';

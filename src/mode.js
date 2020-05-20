@@ -56,6 +56,10 @@ function RemoverEvent(selector) {
     .shadowRoot.querySelector(selector)
     .addEventListener('click', function (e) {
       e.preventDefault();
+      if (typeof (window.pupdata || {}).closeEventOverride === 'function') {
+        window.pupdata.closeEventOverride(selector);
+        return;
+      }
       SetCookie();
       if (this.getAttribute('href') === 'function') {
         document.querySelector('#pupdata-popup').remove();

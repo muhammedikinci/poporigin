@@ -82,6 +82,11 @@ window.pupdata = {
 };
 ```
 
+## Examples in live
+
+For popup 1 -> http://toptimal.xyz/popup1/<br>
+For popup 2 -> http://toptimal.xyz/popup2/
+
 ## Authors
 
 * **Muhammmed İKİNCİ**

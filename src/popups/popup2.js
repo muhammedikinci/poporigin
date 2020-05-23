@@ -89,7 +89,7 @@ export const popup = `
             width: 100%;
             height: auto;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             border-radius: ${window.pupdata.borderRadius};
             -webkit-box-shadow: 0px 2px 6px 0px rgb(194, 194, 194);
@@ -121,6 +121,8 @@ export const popup = `
             display: block;
         }
         .firstButton {
+            min-width: 100px;
+            text-align: center;
             background-color: ${window.pupdata.colors.color2};
             color: white;
             padding: ${window.pupdata.okButton.padding};
@@ -198,6 +200,9 @@ export const popup = `
         .closeButton {
             width: 25px;
             height: 25px;
+            min-width: 25px;
+            min-height: 25px;
+            margin-left: 10px;
             background-color: ${window.pupdata.colors.color2};
             border-radius: 50px;
             right: 15px;
